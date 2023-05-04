@@ -2,21 +2,17 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Member;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\MemberModel;
+use Illuminate\Http\Request;
 
-class MemberController extends Controller
+class ProfileController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        // $members = Member::all();
-        // return view('admin.users.index', compact('members'));
-        return view('admin.member.index');
+        return view('admin.profile.index');
     }
 
     /**
@@ -24,7 +20,7 @@ class MemberController extends Controller
      */
     public function create()
     {
-        return view('admin.member.add');
+        //
     }
 
     /**

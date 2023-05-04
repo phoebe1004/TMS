@@ -76,8 +76,25 @@
     {{-- End  --}}
     <script>
         $(document).ready(function() {
+
             $('#table').DataTable();
+
         });
+
+        $(function() {
+
+            $("[data-bs-target='#exampleModal']").click((e)=> {
+
+                $("#exampleModal .card-body img").attr("src", `${e.target.currentSrc}`);
+                console.log(e.currentTarget.offsetParent.cells[3].innerText);
+                $("#exampleModal #exampleModalLabel").text(`Company Name: ${e.currentTarget.offsetParent.cells[3].innerText}`)
+
+            });
+            
+
+
+        })
+
     </script>
 
     @yield('scripts')

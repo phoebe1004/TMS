@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\Admin\MemberController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\TaskController;
+use App\Http\Controllers\Admin\MemberController;
+use App\Http\Controllers\Admin\ProfileController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
@@ -33,8 +34,11 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
         return view('admin.dashboard');
     });
     Route::resource('tasks', TaskController::class);
-
     Route::get('users', [DashboardController::class,'users']);
     // Route::get('view-user/{id}', [DashboardController::class,'viewuser']);
-    Route::get('members', [MemberController::class, 'members']);    
+    Route::resource('members', MemberController::class);
+    // Route::get('/members',function(){
+    //     return view('admin.member.index');
+    // });
+    Route::resource('profiles', ProfileController::class);
 });

@@ -32,22 +32,22 @@
                     <p><b>Add Task</b></p>
                 </a>
             </li>
-            <li class="nav-item  {{ Request::is('members') ? 'active' : '' }}  ">
-                <a class="nav-link" href="#">
-                    <i class="fa fa-people-group fa-beat"></i>
+            <li class="nav-item {{ Request::is('members') ? 'active' : '' }} ">
+                <a class="nav-link" href="{{ route('members.index') }}">
+                    <i class="fa fa-people-group fa-bounce"></i>
                     <p><b>Team Members</b></p>
                 </a>
             </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="#">
+            <li class="nav-item {{ Request::is('members/create') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('members.create') }}">
                     <i class="fa-sharp fa-solid fa-clock-rotate-left fa-beat"></i>
-                    <p><b>Task History</b></p>
+                    <p><b>Add Team Member</b></p>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fa fa-list fa-beat"></i>
-                    <p><b>Reports</b></p>
+            <li class="nav-item {{ Request::is('profiles') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('profiles.index') }}">
+                    <i class="fa fa-address-card fa-beat"></i>
+                    <p><b>Profile</b></p>
                 </a>
             </li>
         </ul>

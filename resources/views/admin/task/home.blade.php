@@ -142,7 +142,17 @@
     <script>
         $(document).ready(function() {
             $('#table').DataTable();
+
+
         });
+
+        $(function() {
+
+            $("[data-bs-target='#exampleModal']").click((e)=> {
+                console.log(e.target.currentSrc)}
+            );
+
+        })
     </script>
     {{-- End Table --}}
 @endsection
