@@ -73,8 +73,8 @@
         }
 
         /* input {
-          text-align: center;
-          } */
+              text-align: center;
+              } */
         .tbox {
             position: absolute;
             display: none;
@@ -196,10 +196,10 @@
                                         {{ __('Register') }}
                                     </button>
                                     @if (Route::has('login'))
-                                    <span class="nav-item btn btn-success">
-                                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                    </span>
-                                @endif
+                                        <span class="nav-item btn btn-success">
+                                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                        </span>
+                                    @endif
                                 </div>
                             </div>
                         </form>
