@@ -40,7 +40,7 @@
             </li>
             <li class="nav-item {{ Request::is('members/create') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('members.create') }}">
-                    <i class="fa-sharp fa-solid fa-clock-rotate-left fa-beat"></i>
+                    <i class="fa-sharp fa-solid fa-user-plus fa-beat"></i>
                     <p><b>Add Team Member</b></p>
                 </a>
             </li>
