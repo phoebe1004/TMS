@@ -90,9 +90,6 @@
                 $("#exampleModal #exampleModalLabel").text(`Company Name: ${e.currentTarget.offsetParent.cells[3].innerText}`)
 
             });
-
-
-
         })
 
     </script>
