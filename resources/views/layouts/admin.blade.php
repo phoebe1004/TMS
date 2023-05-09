@@ -93,7 +93,6 @@
         })
         $(function() {
             $("[  data-bs-target='#example3Modal']").click((e)=>{
-
                 console.log(e.currentTarget.offsetParent.cells[3].innerText);
                 $("#example3Modal #exampleModal3Label").text(`Company Name: ${e.currentTarget.offsetParent.cells[3].innerText}`)
             });

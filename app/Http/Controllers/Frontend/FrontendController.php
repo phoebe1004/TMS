@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Task;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -14,6 +15,25 @@ class FrontendController extends Controller
     {
         return view('frontend.index');
     }
+    // public function searchTask(Request $request)
+    // {
+    //     $searched_task = $request->task_name;
+
+    //     if($searched_task != "")
+    //     {
+    //         $task = Task::where("name","like", "%$searched_task%")->first();
+    //         if($task)
+    //         {
+    //             return redirect('task/'.$task->task->slug.'/'.$task->slug);
+    //         }
+    //         else{
+    //             return redirect()->back()->with('status', "No Task match your search");
+    //         }
+    //     }
+    //     else{
+    //         return redirect()->back();
+    //     }
+    // }
 
     /**
      * Show the form for creating a new resource.

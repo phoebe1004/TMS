@@ -33,13 +33,13 @@
 
     <body>
         <div class="wrapper">
-            @include('layouts.front.sidebar')
+            @include('layouts.front.frontsidebar')
             <div class="main-panel">
-                @include('layouts.front.adminnav')
+                @include('layouts.front.frontnav')
                 <div class="content">
                     @yield('content')
                 </div>
-                @include('layouts.front.adminfooter')
+                @include('layouts.front.frontfooter')
             </div>
         </div>
 

@@ -13,6 +13,15 @@ return new class extends Migration
     {
         Schema::create('members', function (Blueprint $table) {
             $table->id();
+            $table->string('username');
+            $table->string('email_address');
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('address');
+            $table->string('city');
+            $table->string('country');
+            $table->string('postal_code');
+            $table->string('about_me');
             $table->timestamps();
         });
     }

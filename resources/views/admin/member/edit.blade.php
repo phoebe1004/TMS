@@ -11,9 +11,9 @@
             <p class="card-category">Basic Information</p>
           </div>
           <div class="card-body">
-            <form action="{{ route('members.store') }}" method="POST" enctype="multipart/form-data" id="form">
+            <form action="{{ route('members.update', $members->id) }}" method="POST" enctype="multipart/form-data" id="form">
                 @csrf
-                @method('POST')
+                @method('PUT')
               <div class="row">
                 <div class="col-md-5">
                   <div class="form-group">
@@ -24,13 +24,13 @@
                 <div class="col-md-3">
                   <div class="form-group">
                     <label class="bmd-label-floating text-black">Username</label>
-                    <input type="text" name="username" id="username" class="form-control">
+                    <input type="text" name="username" id="username" value="{{ $members->username }}" class="form-control">
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
                     <label class="bmd-label-floating text-black">Email address</label>
-                    <input type="email" name="email_address" id="email_address" class="form-control">
+                    <input type="email" name="email_address" id="email_address" value="{{ $members->email_address }}" class="form-control">
                   </div>
                 </div>
               </div>
@@ -38,13 +38,13 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label class="bmd-label-floating text-black">First Name</label>
-                    <input type="text" name="first_name" id="first_name" class="form-control">
+                    <input type="text" name="first_name" id="first_name" value="{{ $members->first_name }}" class="form-control">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label class="bmd-label-floating text-black">Last Name</label>
-                    <input type="text" name="last_name" id="last_name" class="form-control">
+                    <input type="text" name="last_name" id="last_name" value="{{ $members->last_name }}" class="form-control">
                   </div>
                 </div>
               </div>
@@ -52,7 +52,7 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <label class="bmd-label-floating text-black">Address</label>
-                    <input type="text" name="address" id="address" class="form-control">
+                    <input type="text" name="address" id="address" value="{{ $members->address }}" class="form-control">
                   </div>
                 </div>
               </div>
@@ -60,19 +60,19 @@
                 <div class="col-md-4">
                   <div class="form-group">
                     <label class="bmd-label-floating text-black">City</label>
-                    <input type="text" name="city" id="address" class="form-control">
+                    <input type="text" name="city" id="city" value="{{ $members->city }}" class="form-control">
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
                     <label class="bmd-label-floating text-black">Country</label>
-                    <input type="text" name="country" id="country" class="form-control">
+                    <input type="text" name="country" id="country" value="{{ $members->country }}" class="form-control">
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
                     <label class="bmd-label-floating text-black">Postal Code</label>
-                    <input type="text" name="postal_code" id="postal_code" class="form-control">
+                    <input type="text" name="postal_code" id="postal_code" value="{{ $members->postal_code }}" class="form-control">
                   </div>
                 </div>
               </div>
@@ -82,7 +82,7 @@
                     <label class="text-black">About Me</label>
                     <div class="form-group">
                       <label class="bmd-label-floating">Add short description</label>
-                      <textarea class="form-control" name="about_me" id="about_me" rows="5"></textarea>
+                      <textarea class="form-control" name="about_me" id="about_me" value="{{ $members->about_me }}" rows="5"></textarea>
                     </div>
                   </div>
                 </div>

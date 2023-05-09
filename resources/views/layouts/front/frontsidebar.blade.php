@@ -38,12 +38,6 @@
                     <p><b>Profile</b></p>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fa-solid fa-right-to-bracket fa-beat"></i>
-                    <p><b>Login</b></p>
-                </a>
-            </li>
         </ul>
     </div>
 </div>

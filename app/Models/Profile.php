@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Profile extends Model
 {
     use HasFactory;
+    protected $table = 'profiles';
+    protected $fillable = [
+        'task_id',
+    ];
 }
